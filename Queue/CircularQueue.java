@@ -1,24 +1,24 @@
 public class main {
     public static void main(String[] args) {
-        StaticQueue sq = new StaticQueue(5);
-        sq.enqueue(8);
-        sq.enqueue(9);
-        sq.enqueue(6);
-        sq.enqueue(4);
-        sq.enqueue(1);
-        sq.dequeue();
+        CircularQueue cq = new CircularQueue(5);
+        cq.enqueue(8);
+        cq.enqueue(9);
+        cq.enqueue(6);
+        cq.enqueue(4);
+        cq.enqueue(1);
+        cq.dequeue();
         
-        sq.enqueue(2);
+        cq.enqueue(2);
         
-        sq.display();
+        cq.display();
     }
 }
 
-class StaticQueue {
+class CircularQueue {
     int[] queue;
     int rear, front;
 
-    public StaticQueue(int capacity) {
+    public CircularQueue(int capacity) {
         queue = new int[capacity];
         rear = front = -1;
     }
